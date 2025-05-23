@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root {
+  --background: 0 0% 100%; /* #FFFFFF */
+  --foreground: 222 84% 4.9%; /* #020817 */
+  --muted: 210 40% 98%; /* #F8FAFC */
+  --muted-foreground: 215.4 16.3% 46.9%; /* #64748B */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 222 84% 4.9%; /* #020817 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 222 84% 4.9%; /* #020817 */
+  --border: 214.3 31.8% 91.4%; /* #E2E8F0 */
+  --input: 214.3 31.8% 91.4%; /* #E2E8F0 */
+  --primary: 222.2 84% 4.9%; /* #0F172A */
+  --primary-foreground: 210 40% 98%; /* #F8FAFC */
+  --secondary: 210 40% 96%; /* #F1F5F9 */
+  --secondary-foreground: 222.2 84% 4.9%; /* #0F172A */
+  --accent: 210 40% 96%; /* #F1F5F9 */
+  --accent-foreground: 222.2 84% 4.9%; /* #0F172A */
+  --destructive: 0 84.2% 60.2%; /* #EF4444 */
+  --destructive-foreground: 210 40% 98%; /* #F8FAFC */
+  --ring: 222.2 84% 4.9%; /* #0F172A */
+  --radius: 0.5rem;
+  
+  /* Custom NoticiasCOL brand colors */
+  --brand-primary: 207 90% 54%; /* #1E88E5 - Blue */
+  --brand-secondary: 0 84% 60%; /* #DC2626 - Red */
+  --brand-accent: 142 71% 45%; /* #059669 - Green */
+  --brand-yellow: 45 93% 47%; /* #EAB308 - Yellow */
+  
+  /* News specific colors */
+  --news-urgent: 0 84% 60%; /* #DC2626 */
+  --news-politics: 207 90% 54%; /* #1E88E5 */
+  --news-sports: 142 71% 45%; /* #059669 */
+  --news-entertainment: 271 81% 56%; /* #7C3AED */
+  --news-economy: 25 95% 53%; /* #EA580C */
+  --news-technology: 217 91% 60%; /* #2563EB */
+  --news-culture: 316 73% 52%; /* #DB2777 */
+}
+
+.dark {
+  --background: 222.2 84% 4.9%; /* #0F172A */
+  --foreground: 210 40% 98%; /* #F8FAFC */
+  --muted: 217.2 32.6% 17.5%; /* #1E293B */
+  --muted-foreground: 215 20.2% 65.1%; /* #94A3B8 */
+  --popover: 222.2 84% 4.9%; /* #0F172A */
+  --popover-foreground: 210 40% 98%; /* #F8FAFC */
+  --card: 222.2 84% 4.9%; /* #0F172A */
+  --card-foreground: 210 40% 98%; /* #F8FAFC */
+  --border: 217.2 32.6% 17.5%; /* #1E293B */
+  --input: 217.2 32.6% 17.5%; /* #1E293B */
+  --primary: 210 40% 98%; /* #F8FAFC */
+  --primary-foreground: 222.2 84% 4.9%; /* #0F172A */
+  --secondary: 217.2 32.6% 17.5%; /* #1E293B */
+  --secondary-foreground: 210 40% 98%; /* #F8FAFC */
+  --accent: 217.2 32.6% 17.5%; /* #1E293B */
+  --accent-foreground: 210 40% 98%; /* #F8FAFC */
+  --destructive: 0 62.8% 30.6%; /* #991B1B */
+  --destructive-foreground: 210 40% 98%; /* #F8FAFC */
+  --ring: 212.7 26.8% 83.9%; /* #CBD5E1 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .text-brand-primary {
+    color: hsl(var(--brand-primary));
+  }
+  
+  .text-brand-secondary {
+    color: hsl(var(--brand-secondary));
+  }
+  
+  .text-brand-accent {
+    color: hsl(var(--brand-accent));
+  }
+  
+  .bg-brand-primary {
+    background-color: hsl(var(--brand-primary));
+  }
+  
+  .bg-brand-secondary {
+    background-color: hsl(var(--brand-secondary));
+  }
+  
+  .bg-brand-accent {
+    background-color: hsl(var(--brand-accent));
+  }
+  
+  .text-news-urgent {
+    color: hsl(var(--news-urgent));
+  }
+  
+  .text-news-politics {
+    color: hsl(var(--news-politics));
+  }
+  
+  .text-news-sports {
+    color: hsl(var(--news-sports));
+  }
+  
+  .text-news-entertainment {
+    color: hsl(var(--news-entertainment));
+  }
+  
+  .text-news-economy {
+    color: hsl(var(--news-economy));
+  }
+  
+  .text-news-technology {
+    color: hsl(var(--news-technology));
+  }
+  
+  .text-news-culture {
+    color: hsl(var(--news-culture));
+  }
+  
+  .bg-news-urgent {
+    background-color: hsl(var(--news-urgent));
+  }
+  
+  .bg-news-politics {
+    background-color: hsl(var(--news-politics));
+  }
+  
+  .bg-news-sports {
+    background-color: hsl(var(--news-sports));
+  }
+  
+  .bg-news-entertainment {
+    background-color: hsl(var(--news-entertainment));
+  }
+  
+  .bg-news-economy {
+    background-color: hsl(var(--news-economy));
+  }
+  
+  .bg-news-technology {
+    background-color: hsl(var(--news-technology));
+  }
+  
+  .bg-news-culture {
+    background-color: hsl(var(--news-culture));
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--foreground));
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Print styles for better article printing */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
